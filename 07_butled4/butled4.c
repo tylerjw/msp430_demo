@@ -17,13 +17,14 @@ int led_states[4] = [0,(LED1),(LED2),(LED1|LED2)]
 void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;       // disable wdt+
-    P1OUT = 0;                      // leds off
-    P1OUT = LEDS;                   // output enable leds
+    P1OUT = BTN;                    // pull up
+    P1REN = BTN;                    // pull enabled
+    P1DIR = LEDS;                   // output enable leds
 
     for (;;)
     {
-        while(!(P1IN & BTN));   // button up, loop
-        while(P1IN & BTN);      // button down, loop
+        while(P1IN & BTN);   // button up, loop
+        while(!(P1IN & BTN));      // button down, loop
         advance_leds();
     }
 }

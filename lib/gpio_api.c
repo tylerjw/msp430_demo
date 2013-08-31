@@ -17,7 +17,7 @@ bool _validate_pin(int port, int pin)
     return true;
 }
 
-void gpio_init (int port, int pin, int direction)
+bool gpio_init (int port, int pin, int direction)
 {
     int nbit = ~(1 << pin);     // inverted bit mask
     if(direction)
@@ -43,7 +43,29 @@ void gpio_init (int port, int pin, int direction)
     return true;
 }
 
-void gpio_write(int port, int pin, int value)
+bool gpio_ioctl_pull_en(int port, int pin, int direction)
+{
+    int mask = 1 << pin;    // mask for setting pin
+    if(direction)
+        direction = mask;
+
+    if (!_validate_pin(port,pin))
+        return false;
+
+    if (port == 1)
+    {
+        P1OUT = direction;  // pull up/down
+        P1REN = mask;
+    }
+    else            // port 2
+    {
+        P2OUT = direction;  // pull up/down
+        P2REN = mask;
+    }
+    return true
+}
+
+bool gpio_write(int port, int pin, int value)
 {
     if (value)              
         value = 1 << pin;   // mask for setting pin

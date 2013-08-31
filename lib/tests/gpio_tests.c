@@ -2,13 +2,14 @@
  */
 
 #include  <msp430g2553.h>
-#include  "gpio_lib.h"
+#include  "../lib/gpio_lib.h"
 
 void main(void)
 {
     gpio_init(1,0,OUTPUT);      // red led
     gpio_init(1,6,OUTPUT);      // green led
     gpio_init(1,3,INPUT);       // button
+    gpio_ioctl_pull_en(1,3,UP);  // pull up on button
 
     for(;;)
     {

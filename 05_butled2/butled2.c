@@ -12,14 +12,15 @@
 void main (void)
 {
     WDTCTL = WDTPW | WDTHOLD;   // disable wdt+
-    P1OUT = LEDS;               // leds on
-    P1OUT = LEDS;               // output enable leds
+    P1DIR |= LEDS;          // set red and green led out
+    P1REN |= BTN;          // pull enabled
+    P1OUT |= BTN;          // pull up 
 
     for (;;)
     {
-        while(!(P1IN & BTN));   // button up, loop
+        while(P1IN & BTN);   // button up, loop
         P1OUT = LEDS;           // turn on leds
-        while(P1IN & BTN);      // button down, loop
+        while(!(P1IN & BTN));      // button down, loop
         P1OUT = ~LEDS;          // turn off leds
     }
 }
