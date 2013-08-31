@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; stop watchdog]]></content>
+    <tabTrigger>wdt_disable</tabTrigger>
+    <scope>source.msp430x</scope>
+    <description>Disable the Watchdog Timer</description>
+</snippet>

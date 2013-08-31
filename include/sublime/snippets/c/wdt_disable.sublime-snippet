@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[WDTCTL = WDTPW | WDTHOLD;       // disable wdt+]]></content>
+    <tabTrigger>wdt_disable</tabTrigger>
+    <scope>source.c</scope>
+    <description>Disable the Watchdog Timer</description>
+</snippet>

@@ -1,0 +1,5 @@
+<snippet>
+    <content><![CDATA[#include  <msp430g2553.h>]]></content>
+    <tabTrigger>include_msp430g2553</tabTrigger>
+    <scope>source.msp430x</scope>
+</snippet>
