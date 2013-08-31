@@ -71,13 +71,36 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "// butledl.c - press button to light LED\n// Single loop with \"if\"\n// launchpad with msp430g2553, red led on P1.0, green led on P1.6\n// button on P1.3\n\n#include  <msp430g2553.h>\n\n#define LED_ON  BIT0|BIT6  // both red and green leds\n#define BTN     BIT3       // button \n\n\nvoid main (void)\n{\n    WDTCTL = WDTPW | WDTHOLD;       // disable wdt+\n    P1DIR |= LED_ON;                // set red and green led out\n    P1OUT &= 0;                // turn the leds off\n    for(;;) \n    {\n        if(P1IN & BTN)        // button is down\n        {\n            P2OUT |= 1;       // turn the leds on\n        } else {              // button is not pressed\n            P2OUT &= 0;       // turn the leds off\n        }\n    }\n}",
+			"file": "/Users/tylerjw/Projects/msp430/demos/03 butled1/butled1.c",
+			"file_size": 720,
+			"file_write_time": 1377947091000000,
+			"settings":
+			{
+				"buffer_size": 710,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tylerjw/Projects/msp430/demos/03 butled1/makefile",
+			"settings":
+			{
+				"buffer_size": 2273,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 147.0,
 		"selected_items":
 		[
+			[
+				"make",
+				"Set Syntax: Makefile"
+			],
 			[
 				"msp",
 				"Set Syntax: MSP430 Assembly"
@@ -123,7 +146,7 @@
 				"Package Control: Add Repository"
 			]
 		],
-		"width": 400.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -140,6 +163,14 @@
 	},
 	"file_history":
 	[
+		"/Users/tylerjw/Projects/msp430/demos/01 ledson/ledson.c",
+		"/Users/tylerjw/Projects/msp430/HelloWorld/build.sh",
+		"/Users/tylerjw/Projects/msp430/demos/02 ledsasm/ledsasm.s",
+		"/Users/tylerjw/Projects/msp430/demos/02 ledsasm/makefile",
+		"/Users/tylerjw/Projects/msp430/demos/01 ledson/makefile",
+		"/Users/tylerjw/Projects/msp430/msp430_skeleton/Makefile",
+		"/Users/tylerjw/Projects/msp430/demos/01 ledson/Makefile",
+		"/Users/tylerjw/Projects/msp430/demos/01 ledson/makefile2",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/gpio_api.h",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/tests/gpio_tests.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/06 butled3/butled3.c",
@@ -229,6 +260,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"APP",
 			"~bit",
 			"direction",
 			"P1IN",
@@ -347,8 +379,63 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/tylerjw/Projects/msp430/demos/03 butled1/butled1.c",
+					"settings":
+					{
+						"buffer_size": 710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/tylerjw/Projects/msp430/demos/03 butled1/makefile",
+					"settings":
+					{
+						"buffer_size": 2273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								552,
+								552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
