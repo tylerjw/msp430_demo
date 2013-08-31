@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"include_msp430g2553	include_msp430g2553"
+			],
+			[
 				"next",
 				"next_payment_due"
 			],
@@ -67,42 +71,31 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "#include  <msp430g2553.h>\n\n#define RED_LED     BIT0\n#define GREEN_LED   BIT6\n\nvoid main (void)\n{\n    WDTCTL = WDTPW | WDTHOLD;   // stop the watchdog timer\n    P1DIR |= RED_LED | GREEN_LED    //set output for leds\n    P1OUT = RED_LED            // turn the red led on\n    for(;;){\n        // loop forever\n    }\n}",
-			"file": "/C/Users/tyler.weaver/Projects/msp430/ledson/ledson.c",
-			"file_size": 292,
-			"file_write_time": 130223369673811732,
-			"settings":
-			{
-				"buffer_size": 312,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/tyler.weaver/Projects/msp430_demo/ledson/Makefile",
-			"settings":
-			{
-				"buffer_size": 2662,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "msp430g2553.h",
-			"settings":
-			{
-				"buffer_size": 56896,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 127.0,
 		"selected_items":
 		[
 			[
+				"msp",
+				"Set Syntax: MSP430 Assembly"
+			],
+			[
+				"synms",
+				"Set Syntax: MSP430 Assembly"
+			],
+			[
 				"synta",
+				"Set Syntax: C"
+			],
+			[
+				"syn c",
+				"Set Syntax: C"
+			],
+			[
+				"sync",
 				"Set Syntax: C"
 			],
 			[
@@ -147,6 +140,34 @@
 	},
 	"file_history":
 	[
+		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/gpio_api.h",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/tests/gpio_tests.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/06 butled3/butled3.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/05 butled2/butled2.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/07 butled4/butled4.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/include/msp430g2553.h",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/msp430_lib.h",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/gpio_api.c",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/gpio_api.c",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/api/mbed.h",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/gpio_object.h",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/hal/gpio_api.h",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/objects.h",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/device.h",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/api/DigitalIn.h",
+		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/common/board.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/02 ledsasm/ledsasm.s",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/04 butasm1/butasm1.s",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/01 ledson/ledson.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/03 butled1/butled1.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/include/sublime/snippets/msp430asm/wdt_disable.sublime-snippet",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/include/sublime/snippets/msp430asm/include_msp430g2553.sublime-snippet",
+		"/C/Users/tyler.weaver/Sublime Text 2.0.2/Data/Packages/User/c/wdt_disable.sublime-snippet",
+		"/C/Users/tyler.weaver/Sublime Text 2.0.2/Data/Packages/User/msp430asm/wdt_disable.sublime-snippet",
+		"/C/Users/tyler.weaver/Sublime Text 2.0.2/Data/Packages/msp430asm/Msp430Assembly.tmLanguage",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/include/wdt_disable.sublime-snippet",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/ledsasm/Makefile",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/ledson/Makefile",
 		"/C/Users/tyler.weaver/Projects/msp430/ledson/Makefile",
 		"/C/Users/tyler.weaver/Projects/msp430/include/msp430g2553.h",
 		"/C/Users/tyler.weaver/Projects/msp430/include/Makefile",
@@ -208,6 +229,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"~bit",
+			"direction",
+			"P1IN",
+			"SFR_8BIT",
 			"hello_world",
 			"start",
 			"date",
@@ -322,87 +347,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/tyler.weaver/Projects/msp430/ledson/ledson.c",
-					"settings":
-					{
-						"buffer_size": 312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								312,
-								312
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/tyler.weaver/Projects/msp430_demo/ledson/Makefile",
-					"settings":
-					{
-						"buffer_size": 2662,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "msp430g2553.h",
-					"settings":
-					{
-						"buffer_size": 56896,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								387,
-								387
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -452,6 +398,14 @@
 		"selected_items":
 		[
 			[
+				"butled2",
+				"msp430_demo/05 butled2/butled2.c"
+			],
+			[
+				"",
+				"msp430_demo/06 butled3/butled3.c"
+			],
+			[
 				"cu",
 				"customer.py"
 			],
@@ -482,10 +436,6 @@
 			[
 				"re",
 				"reports.py"
-			],
-			[
-				"",
-				"notebook_tracker.pyw"
 			],
 			[
 				"set",
