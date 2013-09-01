@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"obj",
+				"OBJDUMP"
+			],
+			[
+				"msp430-obj",
+				"msp430-objdump"
+			],
+			[
+				"LED",
+				"LED_ON"
+			],
+			[
 				"in",
 				"include_msp430g2553	include_msp430g2553"
 			],
@@ -71,6 +83,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/tyler.weaver/Projects/msp430_demo/lib/tests/makefile",
+			"settings":
+			{
+				"buffer_size": 2217,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
@@ -140,14 +160,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/tests/gpio_tests.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/gpio_api.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/gpio_api.h",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/03_butled1/butled1.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/tests/gpio_tests.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/07_butled4/butled4.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/06_butled3/butled3.c",
+		"/C/Users/tyler.weaver/Projects/msp430_demo/05_butled2/butled2.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/06 butled3/butled3.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/05 butled2/butled2.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/07 butled4/butled4.c",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/include/msp430g2553.h",
 		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/msp430_lib.h",
-		"/C/Users/tyler.weaver/Projects/msp430_demo/lib/gpio_api.c",
 		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/gpio_api.c",
 		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/api/mbed.h",
 		"/C/Users/tyler.weaver/Projects/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/gpio_object.h",
@@ -229,6 +254,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"void",
+			"LED_ON",
 			"~bit",
 			"direction",
 			"P1IN",
@@ -347,8 +374,35 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/tyler.weaver/Projects/msp430_demo/lib/tests/makefile",
+					"settings":
+					{
+						"buffer_size": 2217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1664,
+								1664
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
