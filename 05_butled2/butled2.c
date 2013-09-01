@@ -19,8 +19,8 @@ void main (void)
     for (;;)
     {
         while(P1IN & BTN);   // button up, loop
-        P1OUT = LEDS;           // turn on leds
+        P1OUT |= LEDS;           // turn on leds
         while(!(P1IN & BTN));      // button down, loop
-        P1OUT = ~LEDS;          // turn off leds
+        P1OUT &= ~LEDS;          // turn off leds
     }
 }

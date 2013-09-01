@@ -12,14 +12,14 @@
 
 void advance_leds();
 
-int led_states[4] = [0,(LED1),(LED2),(LED1|LED2)]
+int led_states[] = {0,(LED1),(LED2),(LED1+LED2)};
 
 void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;       // disable wdt+
     P1OUT = BTN;                    // pull up
     P1REN = BTN;                    // pull enabled
-    P1DIR = LEDS;                   // output enable leds
+    P1DIR = LED1 + LED2;            // output enable leds
 
     for (;;)
     {
@@ -32,9 +32,9 @@ void main(void)
 void advance_leds(void)
 {
     static state = 0;
-    if(state == 4) 
+    if(state == 3) 
         state = 0;
     else
         state++;
-    P1OUT = led_states[state];
+    P1OUT = led_states[state] + BTN;
 }

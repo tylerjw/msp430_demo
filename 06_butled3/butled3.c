@@ -19,6 +19,6 @@ void main(void)
     {
         while(P1IN & BTN);      // button up, loop
         while(!(P1IN & BTN));   // button down, loop
-        P1OUT = (P1OUT & LEDS)^LEDS; // cycle leds
+        P1OUT = (P1OUT & LEDS)^LEDS + BTN; // cycle leds
     }
 }
