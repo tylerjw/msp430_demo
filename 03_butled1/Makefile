@@ -8,16 +8,16 @@
 # $(TARGET).elf $(TARGET).hex and $(TARGET).txt nad $(TARGET).map are all generated.
 # The TXT file is used for BSL loading, the ELF can be used for JTAG use
 # 
-TARGET     = ledson
+TARGET     = butled1
 MCU        = msp430g2553
 # List all the source files here
 # eg if you have a source file foo.c then list it here
-SOURCES = ledson.c
+SOURCES = butled1.c
 # Include are located in the Include directory
 #INCLUDES = -IInclude
 # Add or subtract whatever MSPGCC flags you want. There are plenty more
 #######################################################################################
-CFLAGS   = -mmcu=$(MCU) -Os -Wall
+CFLAGS   = -mmcu=$(MCU) -Os
 ASFLAGS  = -mmcu=$(MCU) 
 LDFLAGS  = -mmcu=$(MCU) 
 ########################################################################################
