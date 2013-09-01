@@ -54,13 +54,13 @@ bool gpio_ioctl_pull_en(int port, int pin, int direction)
 
     if (port == 1)
     {
-        P1OUT = direction;  // pull up/down
-        P1REN = mask;
+        P1OUT |= direction;  // pull up/down
+        P1REN |= mask;
     }
     else            // port 2
     {
-        P2OUT = direction;  // pull up/down
-        P2REN = mask;
+        P2OUT |= direction;  // pull up/down
+        P2REN |= mask;
     }
     return true
 }

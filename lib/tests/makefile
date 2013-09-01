@@ -6,13 +6,13 @@
 # You need to set TARGET, MCU and SOURCES for your project.
 # TARGET is the name of the executable file to be produced 
 # 
-TARGET     = test
+TARGET     = gpio_test
 MCU        = msp430g2553
 # List all the source files here
 # eg if you have a source file foo.c then list it here
 SOURCES = gpio_test.c
 # Include are located in the Include directory
-INCLUDES = ../
+INCLUDES = .
 # Add or subtract whatever MSPGCC flags you want. There are plenty more
 #######################################################################################
 CFLAGS   = -mmcu=$(MCU) -Os -I$(INCLUDES)

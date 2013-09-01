@@ -17,7 +17,7 @@
  * @param direction (INPUT or OUTPUT) or (0,1)
  * @returns true if configured, else false if error
  */
-bool gpio_init (int port, int pin, int direction);
+bool gpio_init(int port, int pin, int direction);
 
 /* gpio_ioctl_pull_en - enable pull up (input)
  * @param port (1,2)

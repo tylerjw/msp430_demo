@@ -2,7 +2,7 @@
  */
 
 #include  <msp430g2553.h>
-#include  "../lib/gpio_lib.h"
+#include  "gpio_api.h"
 
 void main(void)
 {
